@@ -1,0 +1,11 @@
+.aboutus-page {
+  .team {
+    display: flex;
+    flex-direction: column;
+    background: var(
+      --gradient,
+      linear-gradient(135deg, #05aff2 -0.06%, #044bd9 99.88%)
+    );
+    padding-bottom: 50px;
+  }
+}

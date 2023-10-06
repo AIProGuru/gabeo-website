@@ -1,0 +1,22 @@
+.team-wrapper {
+  text-align: left;
+  max-width: 1216px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 190px;
+  h1 {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 66px */
+    margin-bottom: 48px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}

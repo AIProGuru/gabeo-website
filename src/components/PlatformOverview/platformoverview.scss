@@ -1,0 +1,32 @@
+.platform-overview {
+  background: var(
+    --gradient,
+    linear-gradient(135deg, #05aff2 -0.06%, #044bd9 99.88%)
+  );
+  display: flex;
+  .title-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    max-width: 1216px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      color: #fff;
+      font-family: Poppins;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 66px */
+    }
+
+    flex-direction: column;
+    margin: 0 auto;
+    .content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 181px;
+    }
+  }
+}

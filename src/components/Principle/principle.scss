@@ -1,0 +1,28 @@
+.principle {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1216px;
+  padding-bottom: 160px;
+  padding-top: 160px;
+  h1 {
+    color: var(--Dark-Blue, #044bd9);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px; /* 118.182% */
+    margin-bottom: 60px;
+  }
+  h2 {
+    color: var(--Text, #141415);
+    font-family: Poppins;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px; /* 118.182% */
+    margin-top: 240px;
+    margin-bottom: 40px;
+  }
+}
