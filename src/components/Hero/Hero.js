@@ -18,7 +18,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="buttons">
-          <Link to="/start">Get Started</Link>
+          <Link to="/contact">Get Started</Link>
           <Link to="/demo">Free demo</Link>
         </div>
       </div>

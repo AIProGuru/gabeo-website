@@ -14,7 +14,7 @@ export const Contact = () => {
           collaborations, please don't hesitate to reach out. Our dedicated team
           is ready to provide you with the information you need.
         </p>
-        <Link to="/start">Get Started</Link>
+        <Link to="/contact">Get Started</Link>
       </div>
       <Footer />
     </div>
