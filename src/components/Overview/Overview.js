@@ -14,7 +14,11 @@ import { ReactComponent as BigArrow } from "assets/images/Line 37.svg";
 export const Overview = () => {
   return (
     <div className="overview">
-      <h1>Overview</h1>
+      <h1>Introducing rcmGPTtrademark: </h1>
+      <h5>
+        Redefining Claims Recovery – Swifter, More Affordable, and with Peerless
+        Accuracy
+      </h5>
       <p>Gabeo Denial management process</p>
       <div className="process">
         <div className="denied">
