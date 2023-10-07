@@ -15,18 +15,18 @@ const ContactPage = () => {
   const baseURL = environment.BASE_URL;
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!email || !fullName || !role || !isBot || !company) {
+    if (!email || !fullName || !role || isBot || !company) {
       alert("Fill up all the form !!!");
       return;
     }
     const user = {
       email,
-      fullName,
+      full_name: fullName,
       role,
-      phoneNumber,
-      company,
+      phone: phoneNumber,
+      organization: company,
     };
-    axios.post(`${baseURL}/user`, user).then((res) => {
+    axios.post(`${baseURL}/v1/user`, user).then((res) => {
       if (res.data.status === "success") {
         console.log("success");
       } else {

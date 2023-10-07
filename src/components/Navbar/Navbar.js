@@ -24,7 +24,7 @@ export const Navbar = () => {
         </ul>
       </div>
       <div className="btn">
-        <Link to="/start"> Get Started </Link>
+        <Link to="/contact"> Get Started </Link>
       </div>
     </div>
   );
