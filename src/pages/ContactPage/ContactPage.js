@@ -2,6 +2,8 @@ import { Footer } from "components/Footer/Footer";
 import { Navbar } from "components/Navbar/Navbar";
 import React, { useState } from "react";
 import "./contactpage.scss";
+import axios from "axios";
+import { environment } from "environment";
 
 const ContactPage = () => {
   const [email, setEmail] = useState("");
@@ -10,9 +12,28 @@ const ContactPage = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [company, setCompany] = useState("");
   const [isBot, setIsBot] = useState(true);
-
+  const baseURL = environment.BASE_URL;
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!email || !fullName || !role || !isBot || !company) {
+      alert("Fill up all the form !!!");
+      return;
+    }
+    const user = {
+      email,
+      fullName,
+      role,
+      phoneNumber,
+      company,
+    };
+    axios.post(`${baseURL}/user`, user).then((res) => {
+      if (res.data.status === "success") {
+        console.log("success");
+      } else {
+        alert(res.data.message);
+        console.log("message", res.data.message);
+      }
+    });
   };
   return (
     <>
