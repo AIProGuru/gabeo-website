@@ -28,6 +28,7 @@ const ContactPage = () => {
     };
     axios.post(`${baseURL}/v1/user`, user).then((res) => {
       if (res.data.status === "success") {
+        alert("Request sent. We will get in touch with you soon.");
         console.log("success");
       } else {
         alert(res.data.message);
