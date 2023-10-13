@@ -1,0 +1,29 @@
+.carousel {
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1216px;
+    text-align: center;
+    margin-bottom: 192px;
+    .container {
+      margin: 0 auto;
+      width: 100%;
+      border-color: white;
+
+      .img {
+        display: flex;
+        margin: 0 auto;
+        width: 216px;
+        height: 64px;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .carousel {
+    .content {
+      margin-top: 91px;
+      margin-bottom: 120px;
+    }
+  }
+}

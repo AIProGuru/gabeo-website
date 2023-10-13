@@ -9,10 +9,9 @@ export const Hero = () => {
       <div className="hero-text">
         <div className="title">
           <h1 style={{ color: "#044BD9" }}>Autonomous revenue recovery</h1>
-          <h1>Converting denials into cash with Generative AI</h1>
+          <h2>Converting denials into cash with Generative AI</h2>
         </div>
         <div className="content">
-          <div className="line"></div>
           <div className="desc">
             <TextLogo />
           </div>
@@ -23,7 +22,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="hero-image">
-        <Interface />
+        <Interface className="hero-image-svg" />
       </div>
     </div>
   );

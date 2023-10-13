@@ -10,13 +10,15 @@ export const Proposition = () => {
         <div className="title">
           <h1>Value Proposition</h1>
           <p>
-            We help healthcare organizations recover revenue from payers using a
-            fully autonomous platform that can resubmit and appeal denials in
-            seconds with the use of Generative AI.
+            We help healthcare organizations <b>recover revenue from payers</b>{" "}
+            using a fully autonomous platform that can resubmit and appeal
+            denials in seconds with the use of Generative AI.
           </p>
         </div>
         <div className="images">
-          <img src={PropositionImage} alt="" />
+          <div className="image">
+            <img src={PropositionImage} alt="" />
+          </div>
           <div className="gabeoUI">
             <TopBar />
             <Components />

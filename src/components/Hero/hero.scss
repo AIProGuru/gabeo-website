@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1216px;
+  max-width: 1272px;
+  padding-left: 28px;
+  padding-right: 28px;
   margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 150px;
@@ -10,7 +12,7 @@
   .hero-text {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
     .title {
       h1 {
         color: var(--Text, #141415);
@@ -19,6 +21,14 @@
         font-style: normal;
         font-weight: 600;
         line-height: 44px;
+      }
+      h2 {
+        color: var(--Text, #141415);
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
       }
     }
     .content {
@@ -38,6 +48,9 @@
           font-style: normal;
           font-weight: 400;
           line-height: 28px;
+        }
+        svg {
+          width: 100%;
         }
       }
     }
@@ -61,6 +74,47 @@
           color: #141415;
         }
       }
+    }
+  }
+  .hero-image {
+    svg {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    width: 100%;
+    justify-content: center;
+    margin-top: 85px;
+    margin-bottom: 91px;
+    .hero-text {
+      gap: 0px;
+      .title {
+        h1 {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 170%; /* 34px */
+        }
+        h2 {
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 170%;
+        }
+      }
+      .content {
+        margin-top: 16px;
+        margin-bottom: 80px;
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+    .hero-image {
+      display: none; /* Hide the image on screens with a width of 900px or less */
     }
   }
 }

@@ -18,6 +18,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/about" element={<AboutUsPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
