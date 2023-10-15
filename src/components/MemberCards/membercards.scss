@@ -2,8 +2,27 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  .row {
+
+  .row-vip {
     display: flex;
     gap: 32px;
+  }
+  .row-member {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards {
+    .row-vip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .row-member {
+      display: none;
+    }
   }
 }

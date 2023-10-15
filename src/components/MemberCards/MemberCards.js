@@ -23,7 +23,7 @@ export const MemberCards = ({ members }) => {
   return (
     <div className="cards">
       {vipRows.map((row, rowIndex) => (
-        <div className="row" key={rowIndex}>
+        <div className="row-vip" key={rowIndex}>
           {row.map((vip, vipIndex) => (
             <div className="vip" key={vipIndex}>
               <VIPCard vip={vip} />
@@ -32,7 +32,7 @@ export const MemberCards = ({ members }) => {
         </div>
       ))}
       {memberRows.map((row, rowIndex) => (
-        <div className="row" key={rowIndex}>
+        <div className="row-member" key={rowIndex}>
           {row.map((member, memberIndex) => (
             <div className="member" key={memberIndex}>
               <MemberCard member={member} />
