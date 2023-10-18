@@ -1,6 +1,7 @@
 import { Footer } from "components/Footer/Footer";
 import { Navbar } from "components/Navbar/Navbar";
-import React, { useState } from "react";
+import { MobileNavbar } from "components/Navbar/MobileNavbar";
+import React, { useState, useEffect } from "react";
 import "./contactpage.scss";
 import axios from "axios";
 import { environment } from "environment";
@@ -13,6 +14,21 @@ const ContactPage = () => {
   const [company, setCompany] = useState("");
   const [isBot, setIsBot] = useState(true);
   const baseURL = environment.BASE_URL;
+  const [isMobile, setIsMobile] = useState(false);
+  const updateIsMobile = () => {
+    setIsMobile(window.innerWidth < 900);
+  };
+
+  // Add an event listener to handle window resize
+  useEffect(() => {
+    updateIsMobile();
+    window.addEventListener("resize", updateIsMobile);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", updateIsMobile);
+    };
+  }, []); // Empty dependency array to run this effect only once
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email || !fullName || !role || isBot || !company) {
@@ -38,7 +54,7 @@ const ContactPage = () => {
   };
   return (
     <>
-      <Navbar />
+      {isMobile ? <MobileNavbar /> : <Navbar />}
       <div className="contact-page">
         <div className="contact-content">
           <h1>Request a free Demo!</h1>

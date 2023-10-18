@@ -19,6 +19,7 @@ const HompPage = () => {
 
   // Add an event listener to handle window resize
   useEffect(() => {
+    updateIsMobile();
     window.addEventListener("resize", updateIsMobile);
 
     // Clean up the event listener when the component unmounts

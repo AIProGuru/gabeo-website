@@ -12,7 +12,7 @@ export const AboutUs = () => {
           denials management platform that delivers results in seconds.
         </p>
       </div>
-      <img src="/assets/images/Aboutus.png" alt="" width="600px" />
+      <img src="/assets/images/Aboutus.png" alt="" width="100%" />
     </div>
   );
 };

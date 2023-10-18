@@ -4,6 +4,8 @@
     linear-gradient(135deg, #05aff2 -0.06%, #044bd9 99.88%)
   );
   display: flex;
+  padding-left: 27px;
+  padding-right: 27px;
   .title-content {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -27,6 +29,24 @@
       display: flex;
       flex-direction: column;
       gap: 181px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .platform-overview {
+    .title-content {
+      h1 {
+        display: none;
+      }
+      .content {
+        .platform-img {
+          max-width: 320px;
+          width: 100%;
+          content: url("../../../public/assets/images/block.png");
+          background-repeat: no-repeat;
+        }
+      }
     }
   }
 }
