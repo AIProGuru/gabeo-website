@@ -19,7 +19,9 @@ export const Overview = () => {
 
   return (
     <div className="overview">
-      <h1>Introducing rcmGPTtrademark: </h1>
+      <h1>
+        Introducing rcmGPT<sup>TM</sup>
+      </h1>
       <h5>
         Redefining Claims Recovery – Swifter, More Affordable, and with Peerless
         Accuracy

@@ -14,7 +14,11 @@ export const Hero = () => {
             <div className="line"></div>
             <div className="text">
               <img src="/assets/images/rcmGPT.svg" alt="" />
-              <h3>Elevate Revenue Management with rcmGPTTM:</h3>
+              <div className="spec-text">
+                <h3>
+                  Elevate Revenue Management with rcmGPT<sup>TM</sup>:
+                </h3>
+              </div>
               <h4>
                 The premier autonomous platform that recovers revenue by
                 seamlessly resubmitting and appealing payer denials.

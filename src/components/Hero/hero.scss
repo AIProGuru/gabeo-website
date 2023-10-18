@@ -49,14 +49,21 @@
           align-self: stretch;
         }
         .text {
-          h3 {
-            color: #044bd9;
-            font-family: Poppins;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 28px; /* 155.556% */
+          .spec-text {
+            display: flex;
+            h3 {
+              color: #044bd9;
+              font-family: Poppins;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              span {
+                font-size: 12px;
+                margin-bottom: 4px;
+              }
+            }
           }
+
           h4 {
             color: #303032;
             font-family: Poppins;
