@@ -8,11 +8,14 @@
   margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 150px;
+  gap: 74px;
 
   .hero-text {
+    flex: 2;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    max-width: 580px;
     .title {
       h1 {
         color: var(--Text, #141415);
@@ -33,24 +36,35 @@
     }
     .content {
       .desc {
-        h2 {
-          color: #044bd9;
-          font-family: Poppins;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 28px; /* 155.556% */
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        .line {
+          border-radius: 30px;
+          background: var(
+            --gradient,
+            linear-gradient(135deg, #05aff2 -0.06%, #044bd9 99.88%)
+          );
+          width: 2px;
+          align-self: stretch;
         }
-        p {
-          color: #303032;
-          font-family: Poppins;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 28px;
-        }
-        svg {
-          width: 100%;
+        .text {
+          h3 {
+            color: #044bd9;
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px; /* 155.556% */
+          }
+          h4 {
+            color: #303032;
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+          }
         }
       }
     }
@@ -77,11 +91,13 @@
     }
   }
   .hero-image {
-    svg {
+    flex: 3;
+    img {
       width: 100%;
     }
   }
 }
+
 @media (max-width: 900px) {
   .hero {
     width: 100%;
@@ -107,6 +123,24 @@
       .content {
         margin-top: 16px;
         margin-bottom: 80px;
+        .text {
+          h3 {
+            color: var(--Dark-Blue, #044bd9);
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 27px */
+          }
+          h4 {
+            color: var(--Text, #141415);
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+          }
+        }
       }
       .buttons {
         flex-direction: column;

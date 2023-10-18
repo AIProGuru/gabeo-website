@@ -1,6 +1,4 @@
 import React from "react";
-import { ReactComponent as Interface } from "assets/images/interface.svg";
-import { ReactComponent as TextLogo } from "assets/images/text+logo.svg";
 import "./hero.scss";
 import { Link } from "react-router-dom";
 export const Hero = () => {
@@ -13,7 +11,15 @@ export const Hero = () => {
         </div>
         <div className="content">
           <div className="desc">
-            <TextLogo />
+            <div className="line"></div>
+            <div className="text">
+              <img src="/assets/images/rcmGPT.svg" alt="" />
+              <h3>Elevate Revenue Management with rcmGPTTM:</h3>
+              <h4>
+                The premier autonomous platform that recovers revenue by
+                seamlessly resubmitting and appealing payer denials.
+              </h4>
+            </div>
           </div>
         </div>
         <div className="buttons">
@@ -22,7 +28,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="hero-image">
-        <Interface className="hero-image-svg" />
+        <img src="/assets/images/interface.svg" className="hero-image-svg" />
       </div>
     </div>
   );

@@ -5,6 +5,8 @@
   max-width: 1216px;
   padding-bottom: 160px;
   padding-top: 160px;
+  padding-left: 27px;
+  padding-right: 27px;
   h1 {
     color: var(--Dark-Blue, #044bd9);
     text-align: center;
@@ -27,5 +29,19 @@
   }
   svg {
     width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .principle {
+    h1 {
+      text-align: start;
+      color: var(--Dark-Blue, #044bd9);
+      font-family: Poppins;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 48px */
+    }
   }
 }

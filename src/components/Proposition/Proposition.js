@@ -1,8 +1,6 @@
 import React from "react";
 import "./proposition.scss";
-import PropositionImage from "assets/images/proposition.png";
-import { ReactComponent as TopBar } from "assets/images/Top Bar.svg";
-import { ReactComponent as Components } from "assets/images/Component 3.svg";
+import { GabeoUI } from "components/GabeoUI/GabeoUI";
 export const Proposition = () => {
   return (
     <div className="proposition">
@@ -17,11 +15,10 @@ export const Proposition = () => {
         </div>
         <div className="images">
           <div className="image">
-            <img src={PropositionImage} alt="" />
+            <img src="/assets/images/proposition.png" alt="" />
           </div>
           <div className="gabeoUI">
-            <TopBar />
-            <Components />
+            <GabeoUI />
           </div>
         </div>
       </div>

@@ -1,8 +1,6 @@
 import React from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "assets/logos/Logo.svg";
-import { ReactComponent as Icon } from "assets/icons/Menu icon.svg";
 export const MobileNavbar = () => {
   const handleShow = () => {
     alert("asdfasdf");
@@ -11,11 +9,11 @@ export const MobileNavbar = () => {
     <div className="mobile-navbar">
       <div className="logo">
         <Link to="/">
-          <Logo />
+          <img src="/assets/logos/Logo.svg" />
         </Link>
       </div>
       <div className="btn">
-        <Icon onClick={handleShow} />
+        <img src="/assets/icons/Menu icon.svg" onClick={handleShow} />
       </div>
     </div>
   );

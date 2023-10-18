@@ -11,6 +11,10 @@
     display: flex;
     gap: 32px;
   }
+  .member {
+    max-width: 384px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 900px) {

@@ -1,28 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./overview.scss";
-import { ReactComponent as Denied } from "assets/images/denied.svg";
-import Accessary from "assets/images/223 1.png";
-import { ReactComponent as Process } from "assets/images/Frame 427319478.svg";
-import { ReactComponent as Appeal } from "assets/images/appeal.svg";
-import { ReactComponent as Arrow } from "assets/images/Line 100.svg";
-import Provider from "assets/images/Provider.png";
-import { ReactComponent as RcmGPT } from "assets/images/rcmGPT.svg";
-import Money from "assets/images/money.png";
-import { ReactComponent as PaidInFull } from "assets/images/PaidInFull.svg";
-import Payer from "assets/images/Payer.png";
-import { ReactComponent as BigArrow } from "assets/images/Line 37.svg";
-import Image1 from "assets/images/img.png";
-import { ReactComponent as DownArrow } from "assets/images/Line 102.svg";
-import { ReactComponent as Image2 } from "assets/images/Frame 427319498.svg";
-import Image3 from "assets/images/img3.png";
 export const Overview = () => {
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const updateIsMobile = () => {
     setIsMobile(window.innerWidth < 900);
   };
 
   // Add an event listener to handle window resize
   useEffect(() => {
+    updateIsMobile();
     window.addEventListener("resize", updateIsMobile);
 
     // Clean up the event listener when the component unmounts
@@ -43,27 +29,27 @@ export const Overview = () => {
         <div>
           <div className="process">
             <div className="denied">
-              <Denied />
-              <img src={Accessary} alt="" />
+              <img src="/assets/images/denied.svg" />
+              <img src="/assets/images/223 1.png" alt="" />
             </div>
             <div className="main-process">
-              <Process />
+              <img src="/assets/images/Frame 427319478.svg" />
             </div>
             <div className="appeal">
-              <Appeal />
+              <img src="/assets/images/appeal.svg" />
             </div>
           </div>
           <div className="description">
             <p style={{ width: "191px" }}>
               <strong>Autonomously selects denied claims</strong> for processing
             </p>
-            <Arrow />
+            <img src="/assets/images/Line 100.svg" />
             <p style={{ width: "337px" }}>
               <strong>Autonomously identifies denial</strong> reason,
               establishes the best resolution path based on POS, collects
               necessary docs, draft payer forms & appeal letters
             </p>
-            <Arrow />
+            <img src="/assets/images/Line 100.svg" />
             <p style={{ width: "230px" }}>
               <strong>Autonomously resubmits and appeals</strong> corrected
               claim to payer - AR collection
@@ -71,20 +57,20 @@ export const Overview = () => {
           </div>
           <div className="figures">
             <div className="provider">
-              <img src={Provider} alt="" />
+              <img src="/assets/images/Provider.png" alt="" />
             </div>
             <div className="rcmGPT">
-              <RcmGPT />
+              <img src="/assets/images/rcmGPT.svg" />
             </div>
             <div className="payer">
               <div className="gadgets">
-                <img src={Money} alt="" />
-                <PaidInFull />
+                <img src="/assets/images/money.png" alt="" />
+                <img src="/assets/images/PaidInFull.svg" />
               </div>
-              <img src={Payer} alt="" />
+              <img src="/assets/images/Payer.png" alt="" />
             </div>
           </div>
-          <BigArrow />
+          <img src="/assets/images/Line 37.svg" width="100%" />
           <div className="overview-footer">
             <h3>(0) zero FTE touches</h3>
           </div>
@@ -93,13 +79,13 @@ export const Overview = () => {
       {isMobile && (
         <div className="mobile-process">
           <div>
-            <img src={Image1} alt="" />
+            <img src="/assets/images/img.png" alt="" />
           </div>
-          <DownArrow />
-          <Image2 />
-          <DownArrow />
+          <img src="/assets/images/Line 102.svg" height="80px" />
+          <img src="/assets/images/Frame 427319498.svg" />
+          <img src="/assets/images/Line 102.svg" height="80px" />
           <div>
-            <img src={Image3} alt="" />
+            <img src="/assets/images/img3.png" alt="" />
           </div>
         </div>
       )}

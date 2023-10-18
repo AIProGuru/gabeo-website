@@ -10,7 +10,6 @@ export const MemberCard = ({ member }) => {
       <div className="content">
         <h1>{member.name}</h1>
         <p>{member.role}</p>
-
         <Link to={member.linkedin}>
           <p>{member.linkedin}</p>
         </Link>

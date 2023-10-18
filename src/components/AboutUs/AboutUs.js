@@ -1,6 +1,5 @@
 import React from "react";
 import "./aboutus.scss";
-import Fig from "assets/images/Aboutus.png";
 
 export const AboutUs = () => {
   return (
@@ -13,7 +12,7 @@ export const AboutUs = () => {
           denials management platform that delivers results in seconds.
         </p>
       </div>
-      <img src={Fig} alt="" width="600px" />
+      <img src="/assets/images/Aboutus.png" alt="" width="600px" />
     </div>
   );
 };

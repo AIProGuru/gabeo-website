@@ -1,6 +1,5 @@
 import React from "react";
 import "./vipcard.scss";
-import { ReactComponent as LinkedinIcon } from "assets/logos/linkedin.svg";
 import { Link } from "react-router-dom";
 export const VIPCard = ({ vip }) => {
   return (
@@ -15,7 +14,7 @@ export const VIPCard = ({ vip }) => {
         </div>
         <div className="social-link">
           <Link to={vip.linkedin}>
-            <LinkedinIcon />
+            <img src="/assets/logos/linkedin.svg" />
           </Link>
         </div>
       </div>
