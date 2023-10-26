@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import FeaturesPage from "pages/FeaturesPage/FeaturesPage";
 import AboutUsPage from "pages/AboutUsPage/AboutUsPage";
+import DemoPage from "pages/DemoPage/DemoPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/about" element={<AboutUsPage />} />
+        <Route path="/demo" element={<DemoPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
