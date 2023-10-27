@@ -30,7 +30,7 @@ export const Hero = () => {
   }, []);
 
   const handleDemoAccess = () => {
-    if (password === "123456") {
+    if (password === "ycdemo") {
       // Replace "yourCorrectPassword" with the actual correct password
       setOpen(false); // Close the modal
       localStorage.setItem("sign", "ok");
