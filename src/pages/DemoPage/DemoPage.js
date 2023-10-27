@@ -5,8 +5,10 @@ import "./custom.scss";
 // react-bootstrap components
 import { Card, Table, Container, Row, Col } from "react-bootstrap";
 import VerticalLinearStepper from "components/Stepper/Stepper";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function PreQueue() {
+  const navigate = useNavigate();
   const [isDetail, setIsDetail] = useState(false);
   const [referencePolicy, setReferencePolicy] = useState();
   const [icdCode, setIcdCode] = useState();
@@ -27,6 +29,16 @@ function PreQueue() {
       setIsDetail(true);
     });
   };
+  useEffect(() => {
+    let res = localStorage.getItem("sign");
+    if (res == null) {
+      navigate("/");
+    } else if (res == "ok") {
+      navigate("/demo");
+    } else {
+      navigate("/");
+    }
+  }, []);
   useEffect(() => {
     console.log(referencePolicy, icdCode, denialCode);
   }, [referencePolicy, icdCode, denialCode]);
@@ -121,77 +133,83 @@ function PreQueue() {
         {isDetail && (
           <>
             <Row>
-              <Col md="12">
-                <h2 style={{ textAlign: "center", color: "green" }}>
-                  <b>Claim Number - {claimNumber}</b>
-                </h2>
-                <br />
-              </Col>
-              <Col
-                md="6"
-                className="d-flex flex-column mb-5 justify-content-around"
-              >
-                <h2>
-                  <b>Gabeo Insight</b>
-                </h2>
-                <div
-                  className="insights"
-                  style={{ display: "flex", flexDirection: "column" }}
+              <Row>
+                <Col md="12">
+                  <h2 style={{ textAlign: "center", color: "green" }}>
+                    <b>Claim Number - {claimNumber}</b>
+                  </h2>
+                  <br />
+                </Col>
+              </Row>
+              <Row className="one-col">
+                <Col
+                  md="6"
+                  className="d-flex flex-column mb-5 justify-content-around"
                 >
-                  <p>
-                    <b>Payer Guidelines:</b>
-                  </p>
-                  <p>Reference Policy: {referencePolicy}</p>
-                  <p>
-                    <b>Denial Incomplete Report:</b>
-                  </p>
-                  <p>
-                    <b>Denial Type:</b>
-                    {denialInfo && denialInfo.denied_type}
-                  </p>
-                  <p>
-                    ICD-10: {icdCode && icdCode.map((icdCode) => icdCode + ",")}
-                  </p>
-                  <p>Denial Code: {denialCode}</p>
-                  <br />
-                  <p>
-                    <b>Action Required:</b> {denialReason}
-                  </p>
-                  <br />
-                  <p>
-                    <b>Days to Appeal: </b>
-                    {dayToAppeal}
-                  </p>
-                </div>
-              </Col>
-              <Col md="6" className="d-flex flex-column mb-5">
-                <h2>
-                  <b>Gabeo Predictor</b>
-                </h2>
-                <div
-                  className="insights"
-                  style={{ display: "flex", flexDirection: "column" }}
-                >
-                  <p>
-                    <b>
-                      Overturn Amount YTD:{" "}
-                      {denialInfo && denialInfo.charged_amount}
-                    </b>
-                  </p>
-                  <p>
-                    <b>Overturn Claim Count YTD: 3514</b>
-                  </p>
-                  <br />
-                  <p>Probability of Success: 90.1%</p>
-                  <p>
-                    Reimbursement Amount: {denialInfo && denialInfo.paid_amount}
-                  </p>
-                  <p>
-                    Expected reimbursement days:{" "}
-                    {denialInfo && denialInfo.filing_limit}
-                  </p>
-                </div>
-              </Col>
+                  <h2>
+                    <b>Gabeo Insight</b>
+                  </h2>
+                  <div
+                    className="insights"
+                    style={{ display: "flex", flexDirection: "column" }}
+                  >
+                    <p>
+                      <b>Payer Guidelines:</b>
+                    </p>
+                    <p>Reference Policy: {referencePolicy}</p>
+                    <p>
+                      <b>Denial Incomplete Report:</b>
+                    </p>
+                    <p>
+                      <b>Denial Type:</b>
+                      {denialInfo && denialInfo.denied_type}
+                    </p>
+                    <p>
+                      ICD-10:{" "}
+                      {icdCode && icdCode.map((icdCode) => icdCode + ",")}
+                    </p>
+                    <p>Denial Code: {denialCode}</p>
+                    <br />
+                    <p>
+                      <b>Action Required:</b> {denialReason}
+                    </p>
+                    <br />
+                    <p>
+                      <b>Days to Appeal: </b>
+                      {dayToAppeal}
+                    </p>
+                  </div>
+                </Col>
+                <Col md="6" className="d-flex flex-column mb-5">
+                  <h2>
+                    <b>Gabeo Predictor</b>
+                  </h2>
+                  <div
+                    className="insights"
+                    style={{ display: "flex", flexDirection: "column" }}
+                  >
+                    <p>
+                      <b>
+                        Overturn Amount YTD:{" "}
+                        {denialInfo && denialInfo.charged_amount}
+                      </b>
+                    </p>
+                    <p>
+                      <b>Overturn Claim Count YTD: 3514</b>
+                    </p>
+                    <br />
+                    <p>Probability of Success: 90.1%</p>
+                    <p>
+                      Reimbursement Amount:{" "}
+                      {denialInfo && denialInfo.paid_amount}
+                    </p>
+                    <p>
+                      Expected reimbursement days:{" "}
+                      {denialInfo && denialInfo.filing_limit}
+                    </p>
+                  </div>
+                </Col>
+              </Row>
             </Row>
             <Row>
               <Col md="12" className="d-flex flex-column mb-5">
