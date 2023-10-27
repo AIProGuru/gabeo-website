@@ -76,7 +76,10 @@ export default function VerticalLinearStepper() {
     try {
       const denialCode = new FormData();
       denialCode.append("denialCode", denial_codes);
-      const result = await axios.post(`${BASE_URL}/get_document/`, denialCode);
+      const result = await axios.post(
+        `${BASE_URL}/v2/get_document/`,
+        denialCode
+      );
       console.log(result);
       if (result.data.status === "success") {
         setActiveStep(5);
@@ -102,7 +105,7 @@ export default function VerticalLinearStepper() {
   const confirmPayer = async (claimNumber) => {
     const ClaimID = new FormData();
     ClaimID.append("ClaimID", claimNumber);
-    const result = await axios.post(`${BASE_URL}/confirm_payer/`, ClaimID);
+    const result = await axios.post(`${BASE_URL}/v2/confirm_payer/`, ClaimID);
     if (result.data.status === "success") {
       setActiveStep(1);
       setStepStatus((prevStatus) =>
@@ -123,7 +126,10 @@ export default function VerticalLinearStepper() {
   const mapDenialReason = async (claimNumber) => {
     const ClaimID = new FormData();
     ClaimID.append("ClaimID", claimNumber);
-    const result = await axios.post(`${BASE_URL}/map_denial_reason/`, ClaimID);
+    const result = await axios.post(
+      `${BASE_URL}/v2/map_denial_reason/`,
+      ClaimID
+    );
     if (result.data.status === "success") {
       setActiveStep(2);
       setStepStatus((prevStatus) =>
@@ -151,7 +157,7 @@ export default function VerticalLinearStepper() {
   const validateCPT = async (claimNumber) => {
     const ClaimID = new FormData();
     ClaimID.append("ClaimID", claimNumber);
-    const result = await axios.post(`${BASE_URL}/validate_cpt/`, ClaimID);
+    const result = await axios.post(`${BASE_URL}/v2/validate_cpt/`, ClaimID);
     console.log(result);
     if (result.data.status === "success") {
       setActiveStep(3);
