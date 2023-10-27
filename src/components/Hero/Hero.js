@@ -34,8 +34,8 @@ export const Hero = () => {
       // Replace "yourCorrectPassword" with the actual correct password
       setOpen(false); // Close the modal
       localStorage.setItem("sign", "ok");
-      // navigate("/demo"); // Navigate to the "/demo" page
-      setImage(true);
+      navigate("/demo"); // Navigate to the "/demo" page
+      // setImage(true);
     }
   };
 
@@ -91,7 +91,8 @@ export const Hero = () => {
         </div>
       </div>
       <div className="hero-image">
-        {image && (
+        <img src="/assets/images/interface.svg" className="hero-image-svg" />
+        {/* {image && (
           <iframe
             src="/demo"
             style={{ width: "100%", minHeight: "500px" }}
@@ -99,7 +100,7 @@ export const Hero = () => {
         )}
         {!image && (
           <img src="/assets/images/interface.svg" className="hero-image-svg" />
-        )}
+        )} */}
       </div>
     </div>
   );
