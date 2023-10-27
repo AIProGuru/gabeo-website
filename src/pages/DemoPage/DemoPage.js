@@ -49,10 +49,10 @@ function PreQueue() {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="demo-container">
         {!isDetail && (
-          <Row>
-            <Col md="12" className="d-flex mb-5 justify-content-around">
+          <Row className="row">
+            <Col md="12" className="d-flex mb-5 justify-content-around one-col">
               <button
                 className="bg-primary px-2 py-3 border-0 text-white rounded"
                 onClick={() => checkClaim(4945929)}
@@ -84,7 +84,7 @@ function PreQueue() {
                 Claim 4737213
               </button>
             </Col>
-            <Col md="12" className="d-flex mb-5 justify-content-around">
+            <Col md="12" className="d-flex mb-5 justify-content-around one-col">
               <button
                 className="bg-primary px-2 py-3 border-0 text-white rounded"
                 onClick={() => checkClaim(3824540)}

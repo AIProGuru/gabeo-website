@@ -32,3 +32,19 @@
     justify-content: space-around;
   }
 }
+
+.demo-container {
+  .one-col {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background: #3245ff;
+    padding: 10px;
+    border: nond;
+    color: white;
+    border-radius: 8px;
+  }
+}
