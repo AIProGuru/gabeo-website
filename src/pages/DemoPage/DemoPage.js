@@ -17,12 +17,12 @@ function PreQueue() {
   const [claimNumber, setClaimNumber] = useState();
   const [denialInfo, setDenialInfo] = useState();
 
-  const Que_URL = environment.Que_URL;
+  const BASE_URL = environment.BASE_URL;
   const checkClaim = (claim) => {
     setClaimNumber(claim);
     var query = new FormData();
     query.append("query", claim);
-    axios.post(`${Que_URL}/query_start/`, query).then((res) => {
+    axios.post(`${BASE_URL}/v2/query_start/`, query).then((res) => {
       console.log(res.data);
       setIsDetail(true);
     });
