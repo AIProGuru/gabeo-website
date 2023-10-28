@@ -25,6 +25,7 @@ export default function VerticalLinearStepper({
   setDayToAppeal,
   setAppeal,
   setDenialInfo,
+  setStatus,
   denialCode,
   icdCode,
   denialReason,
@@ -164,13 +165,17 @@ export default function VerticalLinearStepper({
   }, [steps, denialInfoStepper]);
 
   const procedures = async () => {
+    setStatus("Confirming Insurance Payer");
     const payer = await confirmPayer(claimID);
+    setStatus("Mapping Denial Reasons");
     const denial_info = await mapDenialReason(claimID);
     setDenialInfo(denial_info);
     setDenialInfoStepper(denial_info);
+    setStatus("Validating CPT codes");
     const codingInfo = await validateCPT(claimID);
     const appliedPolicy = codingInfo.applied_payer_policy;
     const icd_code = codingInfo.icd_code;
+    setStatus("Getting Applied Payer Policies");
     await appliedPayerPolicy(appliedPolicy);
     setDenialCode(denial_info.denialCode);
     setDenialReason(denial_info.denialReason);
@@ -179,6 +184,7 @@ export default function VerticalLinearStepper({
     await getNecessaryDocuments(denial_info.denialCode);
     console.log(steps);
     console.log(allInfo);
+    setStatus("Generating Appeal Letter");
     await generateAppealLetter(allInfo);
   };
 

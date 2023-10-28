@@ -18,6 +18,7 @@ function PreQueue() {
   const [appeal, setAppeal] = useState(false);
   const [claimNumber, setClaimNumber] = useState();
   const [denialInfo, setDenialInfo] = useState();
+  const [status, setStatus] = useState("");
 
   const BASE_URL = environment.BASE_URL;
   const checkClaim = (claim) => {
@@ -221,12 +222,13 @@ function PreQueue() {
                     <b>Claim Number - {claimNumber}</b>
                   </h2>
                   <br />
+                  <h6 style={{ textAlign: "center" }}>Status: {status}</h6>
                 </Col>
               </Row>
               <Row className="one-col">
                 <Col
                   md="6"
-                  className="d-flex flex-column mb-5 justify-content-around"
+                  className="d-flex flex-column mb-5 justify-content-around insight"
                 >
                   <h2>
                     <b>Gabeo Insight</b>
@@ -309,6 +311,7 @@ function PreQueue() {
                       setDayToAppeal={setDayToAppeal}
                       setAppeal={setAppeal}
                       setDenialInfo={setDenialInfo}
+                      setStatus={setStatus}
                       denialCode
                       icdCode
                       denialReason
