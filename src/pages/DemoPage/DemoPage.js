@@ -64,6 +64,88 @@ function PreQueue() {
       <Container fluid className="demo-container">
         {!isDetail && (
           <Row className="row">
+            <div className="title">
+              <h1>Gabeo’s Claims Processing System – Live Prototype</h1>
+              <p>
+                We help BPO agents process medical claims faster – upto 40-50%
+                faster than current process
+              </p>
+            </div>
+            <div className="content">
+              <p>
+                This is a demonstration of Gabeo platforms claims processing
+                capabilities. Our LLMs are trained on the following data set:
+              </p>
+              <p>Number of claims ingested - 5M.</p>
+              <p>Number of payer policies - approx. 5000 payer policies.</p>
+              <p>Number of provider contracts - 75.</p>
+              <p>
+                Below are few example claims that simulates a queue for a BPO
+                agent to work on. The workflow is:{" "}
+              </p>
+              <ol>
+                <li>BPO agents come to this portal daily</li>
+                <li>
+                  They get served a handful of curated denied claims to work
+                  upon.
+                </li>
+                <li>
+                  All information on claims, denials, diagnosis, labs results,
+                  dr notes etc has been pre-synthesized by the Gabeo system the
+                  night before.
+                </li>
+                <li>
+                  System has already curated insights and recommendations to
+                  surface up to BPO agents, in order to fast track the handling
+                  on this denied claim.
+                </li>
+                <li>
+                  As the BPO agent tackles claims one by one, Gabeo will hand
+                  hold them through the validation process.
+                  <ol style={{ paddingBottom: 0 }}>
+                    <li style={{ marginLeft: "2em" }}>
+                      First it verifies that the payer on this claim is correct;
+                      many claims get denied simply because of mismatched
+                      primary and secondary.{" "}
+                    </li>
+                    <li style={{ marginLeft: "2em", paddingBottom: 0 }}>
+                      Second, it validates correct diagnosis codes; by cross
+                      checking Dr’s notes and ensure CPT code matches
+                      description of diagnosis.
+                    </li>
+                    <li style={{ marginLeft: "2em", paddingBottom: 0 }}>
+                      Third, it validates correct billing code has been applied;
+                      if not, it will suggest alternative and also a possible
+                      modifier (based on historicals)
+                    </li>
+                    <li style={{ marginLeft: "2em", paddingBottom: 0 }}>
+                      Fourth, it fetches and cross checks the payer policy in
+                      seconds. Dissects each section of policy, applies
+                      necessary language and verbiage to support overturning
+                      denials
+                    </li>
+                    <li style={{ marginLeft: "2em", paddingBottom: 0 }}>
+                      Fifth, it finds if any required documents are missing; if
+                      so, it fetches the relevant documents from your EHR system
+                      (if API integrated)
+                    </li>
+                    <li style={{ marginLeft: "2em", paddingBottom: 0 }}>
+                      Sixth, it prepares appeals letter using all the above
+                      information
+                    </li>
+                    <li style={{ marginLeft: "2em", paddingBottom: 0 }}>
+                      Seventh, with a BPO agents approval, submits the entire
+                      resubmission or appeals package directly to the payer.
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+              <p>
+                You are welcome to simulate the BPO use case by clicking any of
+                the claims in the queue below. This is a live system, so
+                appreciate your patience. Thx!
+              </p>
+            </div>
             <Col md="12" className="d-flex mb-5 justify-content-around one-col">
               <button
                 className="bg-primary px-2 py-3 border-0 text-white rounded"
