@@ -27,14 +27,17 @@ LinearProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function LinearWithValueLabel() {
+export default function LinearWithValueLabel({ setStatus }) {
   const [progress, setProgress] = React.useState(10);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress >= 100 ? 100 : prevProgress + 10
-      );
+      setProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          setStatus("Submitted");
+        }
+        return prevProgress >= 100 ? 100 : prevProgress + 10;
+      });
     }, 800);
     return () => {
       clearInterval(timer);
