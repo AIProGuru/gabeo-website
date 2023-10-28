@@ -299,6 +299,7 @@ function PreQueue() {
               <Col md="12" className="d-flex flex-column mb-5">
                 <h2>
                   <b>Gabeo Recommendations</b>
+                  <h3>Status: {status}</h3>
                 </h2>
                 <div className="insights">
                   <div className="stepper">
